@@ -1,0 +1,24 @@
+.btn{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border-radius: 15px;
+    width: 150px;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+body{
+    background-color: whitesmoke;
+}
+input {
+    width:calc(100% - 125px);
+}
+li{
+    list-style: none;
+    color: chocolate;
+    text-decoration-line: underline;
+}

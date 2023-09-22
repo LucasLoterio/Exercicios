@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="/Imagens/3701e763f6ded4234b68d8fac1a9fa85.jpg"></link>
+    <link rel="stylesheet" href="/css/contato.css">
+    <script src="/Js/contato.js"></script>
+    <title>Contatos</title>
+</head>
+<body>
+    
+    <hr>
+    <div>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Cadastrar Contatos</legend>
+                <label for="nome">Informe o nome</label>
+                <input type="text" placeholder="Informe o nome" id="nome">
+                <label for="numero">Informe o numero</label>
+                <input type="text" placeholder="Informe o numero" id="contato">
+                <label for="email">Informe o email</label>
+                <input type="email" placeholder="Informe o email" id="email">
+              </fieldset>
+
+         
+        </form>      
+        <div class="btn">
+            <button  onclick="organizar()">Listar</button>
+            <button class="btn" onclick="inserir()">Cadastrar</button>
+        </div>    
+    </div>
+    <div>       
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Excluir</th>
+                    <th>Alterar</th>
+                </tr>
+            </thead>
+           <tbody>
+              <!--dados do array-->
+           </tbody>
+           
+            
+        </table>
+    </div>
+ 
+</body>
+</html>

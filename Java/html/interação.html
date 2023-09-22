@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="/Imagens/3701e763f6ded4234b68d8fac1a9fa85.jpg"></link>
+    <title>Interação</title>
+</head>
+<body>
+    <hr>
+    <div>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Cadastrar fruta</legend>
+                <label for="fruta">Informe a fruta</label>
+                <input type="text" placeholder="Informe a fruta" id="Fruta">
+                <link rel="stylesheet" href="/css/style.css">
+              </fieldset>
+              
+        </form>  
+    </div>
+    
+    <ul>
+
+    </ul>
+    
+    <script>
+         let fruits = [
+        ];
+ 
+        function listar(){
+            
+            let itens = "";
+            let vefruta = document.getElementById("Fruta").value
+          
+            if (vefruta.length > 2 && !fruits.includes(vefruta)) {
+                fruits.push(vefruta)
+            
+        
+                for (let index = 0; index < fruits. length; index++) {         
+                itens += `<li><a href="https://www.google.com/search?q=${fruits[index]}" target_blank>${fruits[index]} </a></li>`        
+                    
+            }
+            document.getElementsByTagName("ul")[0].innerHTML = itens;
+          
+            }
+            else{
+                alert("Insira uma fruta valida")
+            }
+            
+        }
+          
+    </script>
+    <div class="btn">
+        <button  onclick="listar()">Lista</button>
+    </div>
+   
+
+   
+
+</body>
+</html>

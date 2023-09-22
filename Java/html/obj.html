@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const person = {
+        firstName: "Jamal",
+        lastName: "Rock",
+        telefone: "(21) 99924-2227",
+        email: "JamalRock@gmail.com"
+        };
+
+        var jsonPerson = JSON.stringify(person)
+        console.log(jsonPerson)
+        console.log(jsonPerson.firstName)
+
+        var objPerson = JSON.parse(jsonPerson)
+        console.log(objPerson)
+        console.log(objPerson.email)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+
+        const fruits = [
+        "Banana",
+        "Orange",
+        "Apple"
+        ];        
+        fruits.push("Lemon")
+        console.log(fruits)
+
+        fruits.unshift("Hanhand")
+        console.log(fruits)
+
+        fruits.shift()
+        console.log(fruits)
+
+        fruits.pop()
+        console.log(fruits)
+
+        fruits.push({name:"Joao",number:"(12) 555-412-2534"})
+        console.log(fruits)
+
+        fruits.splice(2,1)
+        console.log(fruits)
+
+
+        let fLen = fruits.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";   
+        }   
+        text += "</ul>";
+
+c
+    </script>
+    
+</body>
+</html>

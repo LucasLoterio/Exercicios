@@ -1,12 +1,14 @@
 input {
-    width:calc(100% - 50px);
+    width:45%;
+    margin-top: 50px;
+    margin-left: 25%;
 }
 .btn{
     display: flex;    
     justify-content: center;
 }
 button{
-    margin: 0px 50px 0px 0px;
+    margin: 0px 15px 15px 0px;
     margin-top: 10px;
     border-radius: 15px;
     width: 45px;
@@ -17,5 +19,23 @@ button:hover{
     color: white;
 }
 body{
-    background-color: whitesmoke;
+    background-color: lightgray;
 }
+fieldset{
+    width: 500px;
+    height: 250px;
+    background-color: grey;
+    align-content: space-between;
+}
+label{
+    display: flex;
+    justify-content: center;
+}
+.dados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+
+

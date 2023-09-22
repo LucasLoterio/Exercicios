@@ -9,23 +9,24 @@
 </head>
 <body>
     <hr>
-    <div>
+    <div class="dados">
         <form action="" method="get">
             <fieldset>
                 <legend>Cadastrar numeros</legend>
-                <input type="number" placeholder="Informe o numero 1" id="x">
-                <label for="x">Informe o numero 2</label>
-                <input type="number" placeholder="Informe o numero 2" id="y">
-                <label for="Y">Informe o numero 2</label>
+                <input type="number" placeholder="Informe o numero 1" id="x"><br>
+                <label for="x">Valor de X</label>
+                <input type="number" placeholder="Informe o numero 2" id="y"><br>
+                <label for="Y">Valor de Y</label>
+                <div class="btn">
+                    <button  onclick="Somar()">+</button>
+                    <button onclick="Subtrair()">-</button>
+                    <button  onclick="Dividir()">/</button>
+                    <button onclick="Mutiplicar()">*</button>
+            </div> 
               </fieldset>
         </form>      
-            
-        <div class="btn">
-                <button  onclick="Somar()">+</button>
-                <button onclick="Subtrair()">-</button>
-                <button  onclick="Dividir()">/</button>
-                <button onclick="Mutiplicar()">*</button>
-        </div> 
+    </div>
+    
 
         <p><span id="demo"></span></p>
 

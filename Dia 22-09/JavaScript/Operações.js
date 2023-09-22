@@ -1,27 +1,32 @@
+
 function Somar(){
     x = parseFloat(document.getElementById("x").value)
     y = parseFloat(document.getElementById("y").value)
     result = x + y
     document.getElementById("demo").innerHTML =  "Resultado = " + result; 
+    event.preventDefault()
 }
 
 function Subtrair(){
-    x = document.getElementById("x").value
-    y = document.getElementById("y").value
+    x = parseFloat(document.getElementById("x").value)
+    y = parseFloat(document.getElementById("y").value)
     result = x - y;
-    document.getElementById("demo").innerHTML =  "Resultado = " + result; 
+    document.getElementById("demo").innerHTML = "Resultado = " + result; 
+    event.preventDefault()
 }
 
 function Dividir(){
-    x = document.getElementById("x").value
-    y = document.getElementById("y").value
+    x = parseFloat(document.getElementById("x").value)
+    y = parseFloat(document.getElementById("y").value)
     result = x / y;
-    document.getElementById("demo").innerHTML =  "Resultado = " + result; 
+    document.getElementById("demo").innerHTML =  "Resultado = " + result;
+    event.preventDefault() 
 }
 
 function Mutiplicar(){
-    x = document.getElementById("x").value
-    y = document.getElementById("y").value
+    x = parseFloat(document.getElementById("x").value)
+    y = parseFloat(document.getElementById("y").value)
     soma = x * y;
-    document.getElementById("demo").innerHTML =  "Resultado = " + soma; 
+    document.getElementById("demo").innerHTML =  "Resultado = " + soma;
+    event.preventDefault() 
 }

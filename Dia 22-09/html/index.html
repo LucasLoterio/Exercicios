@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <script src="/Java/Operações.js"></script>
+    <script src="/JavaScript/Operações.js"></script>
     <link rel="stylesheet" href="/Css/Calculador.css">
+    <link rel="icon" type="image/jpeg" href="/imagens/3701e763f6ded4234b68d8fac1a9fa85.jpg"></link>
+
 </head>
 <body>
     <hr>
@@ -17,18 +19,23 @@
                 <label for="x">Valor de X</label>
                 <input type="number" placeholder="Informe o numero 2" id="y"><br>
                 <label for="Y">Valor de Y</label>
-                <div class="btn">
-                    <button  onclick="Somar()">+</button>
-                    <button onclick="Subtrair()">-</button>
-                    <button  onclick="Dividir()">/</button>
-                    <button onclick="Mutiplicar()">*</button>
-            </div> 
-              </fieldset>
+            </fieldset>
+            
+            <div class="btn">
+                <button  onclick="Somar()">+</button>
+                <button onclick="Subtrair()">-</button>
+                <button  onclick="Dividir()">/</button>
+                <button onclick="Mutiplicar()">*</button>
+            </div>   
+
+            <p><span id="demo"></span></p>
+
         </form>      
+       
+  
     </div>
-    
+  
 
-        <p><span id="demo"></span></p>
-
+        
 </body>
 </html>

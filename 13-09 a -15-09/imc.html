@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="head.js"></script>
+    <script src="Imc.js"></script>
+    <title>Imc</title>
+</head>
+<body>
+    <script src="menu.js"></script>
+
+    <div class="forms">
+        <form action="" method="get">
+        <fieldset> 
+            <legend>Informações do usuario</legend>
+            <label for="nome">Nome </label>
+            <input type="text" placeholder="Informe nome" id="Nome" minlength="3" maxlength="25" required>
+            <br>
+    
+            <label for="Peso"> peso  </label>
+            <input type="number" placeholder=" Peso" id="peso"   ><br>
+
+            <label for="Altura"> altura </label>
+            <input type="number" placeholder=" altura" id="altura"  ><br>
+
+        
+
+          
+        </fieldset>
+        
+        
+        <p><span id="demo"></span></p>
+
+         
+        <div class="containerBtn">
+                <input onclick="CalcImc()" type="button" class ="botao" value="Enviar">
+                <input type="reset" class="botao" value="Cancelar">
+            </div>
+
+
+    
+</body>
+</html>

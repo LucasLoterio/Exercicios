@@ -1,0 +1,85 @@
+#principal{
+    background-color: gray;
+    height: 95px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#secundario{
+    text-align: center;
+    word-spacing: 45px;
+    background-color: rgb(48, 48, 48);
+    height: 40px;
+}
+.itens{
+    color: white;
+    font-size: 25px;
+  
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+}
+li a:hover {
+    color: #000;
+  }
+h1{
+    
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25;
+  
+}
+.forms{
+    width: calc(100% - 10px);
+    padding: 5px;
+    
+}
+.containerBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.botao{
+    margin: 0px 25px 0px 0px;
+    width: 150px;
+    border-radius: 15px;
+}
+.botao:hover{
+    background-color: #000;
+    color: white;
+}
+body{
+    background-color: whitesmoke;
+}
+#demo{
+    display:flex;
+    justify-content: center;
+}
+#cargo:hover{
+    background-color: gainsboro;
+}
+
+@media screen and (max-width: 500px) {
+    #secundario{
+        height: 150px;
+        float: none;
+        width: 100%;
+    }
+    li {
+        display: block;
+    }    
+     .containerBtn{
+        flex-direction: column;
+        align-items: center;
+        }
+    #cargo{
+        width: 100%;
+    }
+}

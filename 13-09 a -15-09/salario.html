@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="head.js"></script>
+    <script src="empresa.js"></script>
+    <title>Salario</title>
+</head>
+<body>
+    <script src="menu.js"></script>
+
+    <div class="forms">
+        <form action="" method="get">
+        <fieldset> 
+            <legend>Informações do usuario</legend>
+            <label for="nome">Informe nome</label>
+            <input type="text" placeholder="Informe nome" id="nome" >
+            <br>
+
+            <label for="cargo">Seu cargo:</label>
+
+            <select  id="cargo">
+            <option value="gerente">Gerente</option>
+            <option value="Supervisores ">Supervisores </option>
+            <option value="operadores ">Operadores </option>
+            <option value="outro">Outro</option>
+            </select>
+    
+            <label for="idade">Informe Salario</label>
+            <input type="number" placeholder=" Salario" id="salario"  ><br>
+        </fieldset>
+     
+        
+        
+        <p><span id="demo"></span></p>
+    
+            <div class="containerBtn">
+                <input onclick="Aumento()" type="button" class ="botao" value="Enviar">
+                <input type="reset" class="botao" value="Cancelar">
+            </div>
+</body>
+</html>

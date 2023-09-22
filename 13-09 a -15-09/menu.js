@@ -1,0 +1,13 @@
+
+document.write('<header id="principal">')
+document.write('      <img src="imagens/Lucasfilm.svg" height="75px" alt="">  ')
+document.write( ' </header>')
+document.write('            <header id="secundario">')
+document.write('<ul>')
+document.write('<li><a class="itens" href="index.html"> inicio</a></li>')
+document.write( '                   <li><a class="itens" href="idade.html"> Idade</a></li>')
+document.write(  '                  <li><a class="itens" href="media.html"> Media</a></li>')
+document.write(   '                 <li><a class="itens" href="imc.html"> Imc</a></li>')
+document.write(    '                <li><a class="itens" href="salario.html"> Salario</a></li>')
+document.write(          '      </ul>')
+document.write(         '</header>')

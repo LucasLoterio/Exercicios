@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="head.js"></script>
+    <script src="media.js"></script>
+    <title>Media</title>
+</head>
+<body>
+    <script src="menu.js"></script>
+
+    <div class="forms">
+        <form action="" method="get">
+        <fieldset> 
+            <legend>Informações do usuario</legend>
+            <label for="nome">Nome do aluno</label>
+            <input type="text" placeholder="Informe nome" id="aluno" minlength="3" maxlength="25" required>
+            <br>
+    
+            <label for="Nota">Nota 01</label>
+            <input type="number" placeholder=" nota" id="n1" min="0" max="10"  ><br>
+
+            <label for="Nota">Nota 02</label>
+            <input type="number" placeholder=" nota" id="n2" min="0" max="10" ><br>
+
+            <label for="Nota">Nota 03</label>
+            <input type="number" placeholder=" nota" id="n3" min="0" max="10" ><br>
+
+            <label for="Frequencia">Frequencia em %</label>
+            <input type="number" placeholder=" Frequencia" id="Frequencia"  ><br>
+        </fieldset>
+        
+        
+    
+        <p><span id="demo"></span></p>
+
+        <div class="containerBtn">
+                <input onclick="Calcula()" type="button" class ="botao" value="Enviar">
+                <input type="reset" class="botao" value="Cancelar">
+            </div>
+
+
+            
+</body>
+</html>

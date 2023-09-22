@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <script src="/Java/Operações.js"></script>
+    <link rel="stylesheet" href="/Css/Calculador.css">
 </head>
 <body>
     <hr>
@@ -19,11 +21,13 @@
         </form>      
             
         <div class="btn">
-                <button  onclick="Somar()">Mais +</button>
-                <button onclick="Subtrair()">Menos -</button>
-                <button  onclick="Dividir()">Divisão /</button>
-                <button onclick="Mutiplicar()">Mutiplicar *</button>
+                <button  onclick="Somar()">+</button>
+                <button onclick="Subtrair()">-</button>
+                <button  onclick="Dividir()">/</button>
+                <button onclick="Mutiplicar()">*</button>
         </div> 
+
+        <p><span id="demo"></span></p>
 
 </body>
 </html>

@@ -16,10 +16,11 @@ button{
 
 button:hover{
     background-color: black;
-    color: white;
+    color: red;
+    border-color: red;
 }
 body{
-    background-color: lightgray;
+    background-color: red;
     
 }
 fieldset{
@@ -60,7 +61,9 @@ input{
 legend{
     color: white;
 }
-
+.num{
+    background-color: red;
+}
 
 
 

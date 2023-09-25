@@ -2,7 +2,7 @@ let info = [
 ];
 
 function inserir(){
-    const numero = parseInt(document.getElementById("numeros").value) 
+    let numero = parseInt(document.getElementById("numeros").value) 
         
      
        if (!info.includes(numero)) {
@@ -43,5 +43,22 @@ function bblSort() {
         }
     }
     organizar()
+}
+function decrescente(){
+    for (var i = 0; i < info.length; i++) {
   
+        
+        for (var j = 0; j < (info.length - i - 1); j++) {
+  
+        
+            if (info[j] < info[j + 1]) {
+  
+             
+                var temp = info[j]
+                info[j] = info[j + 1]
+                info[j + 1] = temp
+            }
+        }
+    }
+    organizar()
 }

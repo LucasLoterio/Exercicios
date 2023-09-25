@@ -5,6 +5,7 @@ input {
 }
 .btn{
     justify-content: center;
+    
 }
 button{
     margin: 0px 15px 15px 0px;
@@ -24,13 +25,14 @@ body{
 fieldset{
     width: 500px;
     height: 350px;
-    background-color: grey;
+    background-color: black ;
 }
 
 .dados{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: 700px;
 }
 
@@ -43,9 +45,21 @@ form{
     display: flex;
     justify-content: center;
     align-items:center;
+    text-align: center  ;
 }
-
-
+input{
+    width: auto;
+    margin: auto;
+}
+.ope{
+    background-color: red;
+}
+.igual{
+    background-color: yellow;
+}
+legend{
+    color: white;
+}
 
 
 

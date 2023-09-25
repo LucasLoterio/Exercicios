@@ -4,7 +4,6 @@ input {
     margin-left: 25%;
 }
 .btn{
-    display: flex;    
     justify-content: center;
 }
 button{
@@ -12,8 +11,6 @@ button{
     margin-top: 10px;
     border-radius: 15px;
     width: 75px;
-    
-    
 }
 
 button:hover{
@@ -22,22 +19,34 @@ button:hover{
 }
 body{
     background-color: lightgray;
+    
 }
 fieldset{
     width: 500px;
-    height: 250px;
+    height: 350px;
     background-color: grey;
-    align-content: space-between;
 }
-label{
-    display: flex;
-    justify-content: center;
-}
+
 .dados{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 700px;
 }
+
+div{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+
+
 
 

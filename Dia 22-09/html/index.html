@@ -12,28 +12,58 @@
 <body>
     <hr>
     <div class="dados">
-        <form action="" method="get">
-            <fieldset>
-                <legend>Cadastrar numeros</legend>
-                <input type="number" placeholder="Informe o numero 1" id="x"><br>
-                <label for="x">Valor de X</label>
-                <input type="number" placeholder="Informe o numero 2" id="y"><br>
-                <label for="Y">Valor de Y</label>
-            </fieldset>
-            
+       
+
+        <form action=""></form>
+        <div>
+        <fieldset>
+            <legend>calculadora</legend>
+            <div class="input">
+                <input type="text" id="display">
+            </div>
+        <div class="btn">
+
+           
+            <div>       
+                <button onclick="inserir(this)">1</button>
+                <button onclick="inserir(this)">2</button>
+                <button onclick="inserir(this)">3</button>
+
+            </div>
+            <div>
+                <button onclick="inserir(this)">4</button>
+                <button onclick="inserir(this)">5</button>
+                <button onclick="inserir(this)">6</button>
+            </div>
+            <div>
+                <button onclick="inserir(this)">7</button>
+                <button onclick="inserir(this)">8</button>
+                <button onclick="inserir(this)">9</button>
+            </div>
+            <div>
+                <button onclick="inserir(this)">0</button>
+            </div>
+        </div>
+        
             <div class="btn">
-                <button  onclick="Somar()">+</button>
-                <button onclick="Subtrair()">-</button>
-                <button  onclick="Dividir()">/</button>
-                <button onclick="Mutiplicar()">*</button>
+                <button onclick="definirOperacao(this)">+</button>
+                <button onclick="definirOperacao(this)">-</button>
+                <button onclick="definirOperacao(this)">÷</button>
+                <button onclick="definirOperacao(this)">*</button>
             </div>   
+            <div class="btn">
+                <button onclick="calcular()">=</button>
+            </div>
+          
+        </fieldset>
+                          
+    </div>
 
-            <p><span id="demo"></span></p>
+            
 
-        </form>      
+
        
   
-    </div>
   
 
         

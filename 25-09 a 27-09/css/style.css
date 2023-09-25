@@ -1,0 +1,9 @@
+ form{
+    display: flex;
+ }
+ fieldset{
+    text-align: center;
+ }
+li{
+    list-style: none;
+}

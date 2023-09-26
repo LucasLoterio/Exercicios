@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div class="Dados">
         <form action="" method="get">
             <fieldset>
                 <legend>Cadastrar numero</legend>
@@ -18,18 +18,58 @@
 
      
         </form>      
-    
-        <div class="btn">
-            <button  onclick="organizar()">Lista</button>
-            <button  onclick="decrescente()">Lista decrescente</button>
-            <button  onclick="bblSort()">Lista crescente</button>
-            <button 
-            onclick="inserir()">Cadastrar</button>
-            <button 
-            onclick="excluir()">Excluir</button>
-           
-        </div>    
+    </div>    
+
+    <div class="btn">
+        <button 
+        onclick="inserir()">Cadastrar</button>
+
     </div>
+
+        <div class="btn">
+            <button class="btnLista" onclick="organizar()">Lista</button>
+            <button class="btnLista"   onclick="decrescente()">Lista decrescente</button>
+            <button  class="btnLista"  onclick="bblSort()">Lista crescente</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <div class="Dados">
+        <form action="" method="get">
+            <fieldset>
+                <legend>Pesquisar</legend>
+                <label for="numero">Informe o numero</label>
+                <input type="number" placeholder="Informe o numero" id="encontrar">
+
+                <input type="text" placeholder="index" id="posicao" readonly>
+            </fieldset>
+
+     
+        </form>      
+    </div>  
+    
+    <div class="btn">
+        <button 
+            onclick="achar()">Pesquisar</button>
+    </div>
+
+    <div>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Excluir</legend>
+                <label for="numero">Informe o numero para excluir</label>
+                <input type="number" placeholder="Informe o numero" id="num">
+            </fieldset>
+        </form>      
+    </div>
+
+    <div class="btn">
+        <button 
+        onclick="excluir()">Excluir</button>
+    </div>
+
     <div>
         <form action="" method="get">
             <fieldset>
@@ -47,8 +87,6 @@
        <button onclick="trocar()">Substituir</button>
     </div>
 
-    <ul>
-
-    </ul>
+    
 </body>
 </html>

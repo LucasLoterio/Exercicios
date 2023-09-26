@@ -1,19 +1,40 @@
- form{
-    display: flex;
- }
+
  fieldset{
-   display: flex;
-    text-align: center;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   background-color: lightgray;
+   margin-bottom: 15px;
+   margin-top: 20px;
  }
 li{
     list-style: none;
 }
 .btn{
-   width: 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 15px;
 }
 button{
    width: 150px;
    border-radius: 15px;
-   text-align: center;
-   
+   text-align: center;  
+}
+button:hover{
+   color: white;
+   background-color: black;
+}
+.dados{
+   display: flex;
+   justify-content: center;
+}
+input{
+   width: calc(100% - 10px);
+}
+body{
+   background-color: whitesmoke;
+}
+.btnLista{
+   margin: 0 15px 0  15px;
 }

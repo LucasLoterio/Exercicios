@@ -81,7 +81,7 @@ function decrescente(){
 
 
 function excluir(){
-   let excluir = pesquisar("numeros")
+   let excluir = pesquisar("num")
      
    info.splice(excluir, 1)
 
@@ -92,8 +92,18 @@ function excluir(){
 function trocar(){
     let velho = pesquisar('n1')
     let novo = document.getElementById('n2').value
-
-    info[velho] = novo
+    if(info.includes(novo)){
+        info[velho] = novo
+    }
 
     organizar()
+}
+
+function achar(){
+    let posicao = document.getElementById("posicao")
+    let input = pesquisar("encontrar")
+
+    posicao.value = input 
+
+   
 }

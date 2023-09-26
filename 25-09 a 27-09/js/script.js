@@ -91,9 +91,10 @@ function excluir(){
 
 function trocar(){
     let velho = pesquisar('n1')
-    let novo = document.getElementById('n2').value
-    if(info.includes(novo)){
-        info[velho] = novo
+    let novo = document.getElementById('n2')
+    
+    if(pesquisar("n2") == -1){
+        info[velho] = novo.value
     }
 
     organizar()
@@ -102,6 +103,7 @@ function trocar(){
 function achar(){
     let posicao = document.getElementById("posicao")
     let input = pesquisar("encontrar")
+
 
     posicao.value = input 
 

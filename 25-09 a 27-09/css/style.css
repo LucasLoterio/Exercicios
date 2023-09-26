@@ -38,3 +38,13 @@ body{
 .btnLista{
    margin: 0 15px 0  15px;
 }
+.lista{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: lightgray;
+}
+ul{
+   border: 2px solid black;
+
+}

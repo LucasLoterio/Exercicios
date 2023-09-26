@@ -11,7 +11,7 @@
     <div>
         <form action="" method="get">
             <fieldset>
-                <legend>Cadastrar Contatos</legend>
+                <legend>Cadastrar numero</legend>
                 <label for="numero">Informe o numero</label>
                 <input type="number" placeholder="Informe o numero" id="numeros">
             </fieldset>
@@ -23,9 +23,28 @@
             <button  onclick="organizar()">Lista</button>
             <button  onclick="decrescente()">Lista decrescente</button>
             <button  onclick="bblSort()">Lista crescente</button>
-            <button class="btn" 
+            <button 
             onclick="inserir()">Cadastrar</button>
+            <button 
+            onclick="excluir()">Excluir</button>
+           
         </div>    
+    </div>
+    <div>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Substituir</legend>
+                <label for="numero">Numero da lista</label>
+                <input type="number" placeholder="Informe o numero" id="n1"><br>
+                <label for="numero">Numero novo</label>
+                <input type="number" placeholder="Informe o numero" id="n2">
+            </fieldset>
+
+     
+        </form>    
+    </div>
+    <div class="btn">
+       <button onclick="trocar()">Substituir</button>
     </div>
 
     <ul>

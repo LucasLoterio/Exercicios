@@ -2,16 +2,18 @@ let info = [
 ];
 
 function inserir(){
-    let numero = parseInt(document.getElementById("numeros").value) 
+    let numero = parseFloat(document.getElementById("numeros").value)
         
      
-       if (!info.includes(numero)) {
-           info.push(numero)
-       }
-        else{
+       if (info.includes(numero)) {
             alert("insira um numero valido")
         }
+        else{
+            info.push(numero)
+        }
 }
+
+
 function organizar(){
      
     let index = 0
@@ -25,6 +27,18 @@ function organizar(){
     }
     document.getElementsByTagName("ul")[0].innerHTML = itens;    
 }
+
+
+function pesquisar(input){
+    let num = parseFloat(document.getElementById(`${input}`).value)
+        if(info.includes(num)){
+            return info.indexOf(num);
+        }
+        else{
+            return -1;
+        }
+}
+
 function bblSort() {
   
     for (var i = 0; i < info.length; i++) {
@@ -44,6 +58,8 @@ function bblSort() {
     }
     organizar()
 }
+
+
 function decrescente(){
     for (var i = 0; i < info.length; i++) {
   
@@ -60,5 +76,24 @@ function decrescente(){
             }
         }
     }
+    organizar()
+}
+
+
+function excluir(){
+   let excluir = pesquisar("numeros")
+     
+   info.splice(excluir, 1)
+
+    organizar()
+}
+
+
+function trocar(){
+    let velho = pesquisar('n1')
+    let novo = document.getElementById('n2').value
+
+    info[velho] = novo
+
     organizar()
 }

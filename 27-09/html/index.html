@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+<body>
+    <script>
+        let myPromise = new Promise((ok, erro)=>{
+           let x = 1
+
+           if(x == 0){
+             ok("OK")
+           }
+           else{
+            erro('Errou')
+           }
+        })
+
+      /*  //passa como argumento a funçaõ de ok
+         // e a função de erro 
+         myPromise.then(
+               (value)=>console.log(value), 
+               (erro)=> console.log(erro)
+            )*/
+
+       myPromise
+       .then((value)=>console.log(value)) 
+       .catch((erro)=> console.log(erro))
+                 
+    </script>
+</body>
+</html>

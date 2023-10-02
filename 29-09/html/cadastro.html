@@ -21,6 +21,8 @@
         
         <button type="submit" class="btn btn-primary m-2 " onclick="cadastrar()">Cadastrar</button>
         <button type="submit" class="btn btn-primary m-2 " onclick="logar()">Logar</button>
+        <button type="submit" class="btn btn-primary m-2 " onclick="sair()">Sair</button>
+
         
     </form>
 
@@ -80,6 +82,9 @@
                 alert('Tabela de usuarios não encontrada')
             }*/
         }
+        function sair(){
+            localStorage.removeItem('userLogado')
+        }   
         
 
         

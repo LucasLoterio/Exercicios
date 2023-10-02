@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="acessaArray()">Acessar array</button>
+    <button onclick="somaTudoQuerForPositivo()">somar</button>
+    <script>
+        function somaTudoQuerForPositivo(){
+           let soma = 0
+           const numeros = [1, 1, 3]
+           try{
+              for(let i = 0; i < numeros.length; i++){
+                if(numeros[i] < 0){
+                    throw "Não aceitamos valores negativos"
+                }
+                soma += numeros[i]
+              }
+           }
+           catch(err){
+              console.log(err)
+           }
+           finally{
+             console.log(`A soma é: ${soma}`)
+           }
+        }
+        function acessaArray(){
+          try{
+            const numeros = [1, 2, 3]
+            let posicao = 2
+            if(posicao >= numeros.length){
+                throw "Posição inválida"
+            }
+            console.log(numeros[posicao])
+          }
+          catch(err){
+             console.log(err)
+          }
+            
+        }
+
+        function dividir(){
+           try{
+            let x = 10
+            let y = 2
+            if(y == 0){
+                throw "Não é possivel dividir por zero"
+            }
+            let resultado = x / y
+            console.log(resultado)
+           }
+           catch(err){
+             console.log(err)
+           } 
+        }
+    </script>
+</body>
+</html>

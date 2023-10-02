@@ -18,10 +18,10 @@
           <label for="InputPassword" class="form-label">Password</label>
           <input type="password" class="form-control"  placeholder="Password"> 
         </div>
-        <div class="d-flex justify-content-center ">
+        
         <button type="submit" class="btn btn-primary m-2 " onclick="cadastrar()">Cadastrar</button>
         <button type="submit" class="btn btn-primary m-2 " onclick="logar()">Logar</button>
-        </div>
+        
     </form>
 
     <script>
@@ -51,6 +51,22 @@
             let inputSenha = document.getElementsByTagName('input')[1]
 
             if(localStorage.getItem('usuarios')){
+                event.preventDefault()
+                let usuarios = JSON.parse(localStorage.getItem('usuarios'))
+                console.log(usuarios)
+                let teste = usuarios.find((teste) => teste.username  == inputUser.value && teste.senha == inputSenha.value)
+                if(teste != null){
+                    console.log("adawd")
+                    localStorage.setItem('userLogado',JSON.stringify(teste))
+                }
+                else{
+                    alert("Usuario ou senha invalido")
+                }
+            }
+            else{
+                alert('Tabela de usuarios não encontrada')
+            }
+            /*if(localStorage.getItem('usuarios')){
               let usuarios = JSON.parse(localStorage.getItem('usuarios')) 
                for(let i = 0; i < usuarios.length; i++){
                    if(inputUser.value == usuarios[i].username && inputSenha.value == usuarios[i].senha){
@@ -62,7 +78,7 @@
             }
             else{
                 alert('Tabela de usuarios não encontrada')
-            }
+            }*/
         }
         
 

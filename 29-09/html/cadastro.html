@@ -18,11 +18,13 @@
           <label for="InputPassword" class="form-label">Password</label>
           <input type="password" class="form-control"  placeholder="Password"> 
         </div>
-        
+        <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-primary m-2 " onclick="cadastrar()">Cadastrar</button>
         <button type="submit" class="btn btn-primary m-2 " onclick="logar()">Logar</button>
+        </div>
+        <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-primary m-2 " onclick="sair()">Sair</button>
-
+        </div>
         
     </form>
 
@@ -34,6 +36,7 @@
             if(localStorage.getItem('usuarios')){
                usuarios = JSON.parse(localStorage.getItem('usuarios'))    
             }
+        
                        
             let inputUser = document.getElementsByTagName('input')[0]
 

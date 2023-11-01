@@ -1,0 +1,14 @@
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\bin\Debug\net6.0\31-10.exe
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\bin\Debug\net6.0\31-10.deps.json
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\bin\Debug\net6.0\31-10.runtimeconfig.json
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\bin\Debug\net6.0\31-10.dll
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\bin\Debug\net6.0\31-10.pdb
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\31-10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\31-10.AssemblyInfoInputs.cache
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\31-10.AssemblyInfo.cs
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\31-10.csproj.CoreCompileInputs.cache
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\31-10.dll
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\refint\31-10.dll
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\31-10.pdb
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\31-10.genruntimeconfig.cache
+C:\Users\lucas.loterio\Desktop\Exercicios\31-10\obj\Debug\net6.0\ref\31-10.dll

@@ -57,7 +57,8 @@ namespace _01_11
         }
         static void adicionar()
         {
-            Console.Clear(); try
+            Console.Clear();
+            try
             {
 
 
@@ -85,17 +86,13 @@ namespace _01_11
                 Carro car = new Carro(placa, marca, modelo, cor);
 
                 carros.Add(car);
+                listar();
             }
             catch
             {
                 
             }
-
-            
-            Console.Clear();
-
         }
-
         static void alterar()
         {
             listar();
@@ -108,6 +105,7 @@ namespace _01_11
                 {
                     if (carros[i].Placa.Equals(aux))
                     {
+                        Console.WriteLine(carros[i]);
                         Console.WriteLine($"" +
                         $"**************************************** \n\n" +
                         $"   Digite 1 para alterar a placa\n" +
@@ -149,7 +147,6 @@ namespace _01_11
            
            
         }
-
         static void excluir()
         {
             listar();
@@ -171,8 +168,6 @@ namespace _01_11
                 Console.WriteLine(carro.ToString());
             }
         }
-
-
 
     }
 }

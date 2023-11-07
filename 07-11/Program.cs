@@ -4,7 +4,20 @@
     {
         static void Main(string[] args)
         {
-            criarVeiculos();
+            Console.WriteLine("Escolha carro ou cliente \n (1)carro (2)cliente  ");
+            int opcao = Convert.ToInt32(Console.ReadLine());
+            switch (opcao)
+            {
+                case 1:
+                    criarVeiculos();
+                    break;
+                case 2:
+                    criaClientes();
+                    break;
+                default:
+                    break;
+            }
+            
 
             Console.ReadKey();
         }

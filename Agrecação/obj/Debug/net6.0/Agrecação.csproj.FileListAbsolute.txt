@@ -1,0 +1,14 @@
+C:\Users\lucas.loterio\source\repos\Agrecação\bin\Debug\net6.0\Agrecação.exe
+C:\Users\lucas.loterio\source\repos\Agrecação\bin\Debug\net6.0\Agrecação.deps.json
+C:\Users\lucas.loterio\source\repos\Agrecação\bin\Debug\net6.0\Agrecação.runtimeconfig.json
+C:\Users\lucas.loterio\source\repos\Agrecação\bin\Debug\net6.0\Agrecação.dll
+C:\Users\lucas.loterio\source\repos\Agrecação\bin\Debug\net6.0\Agrecação.pdb
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\Agrecação.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\Agrecação.AssemblyInfoInputs.cache
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\Agrecação.AssemblyInfo.cs
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\Agrecação.csproj.CoreCompileInputs.cache
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\Agrecação.dll
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\refint\Agrecação.dll
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\Agrecação.pdb
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\Agrecação.genruntimeconfig.cache
+C:\Users\lucas.loterio\source\repos\Agrecação\obj\Debug\net6.0\ref\Agrecação.dll

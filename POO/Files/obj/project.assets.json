@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas.loterio\\source\\repos\\Files\\Files.csproj",
+      "projectUniqueName": "C:\\Users\\lucas.loterio\\Documents\\Entra21\\Exercicios\\POO\\Files\\Files.csproj",
       "projectName": "Files",
-      "projectPath": "C:\\Users\\lucas.loterio\\source\\repos\\Files\\Files.csproj",
+      "projectPath": "C:\\Users\\lucas.loterio\\Documents\\Entra21\\Exercicios\\POO\\Files\\Files.csproj",
       "packagesPath": "C:\\Users\\lucas.loterio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas.loterio\\source\\repos\\Files\\obj\\",
+      "outputPath": "C:\\Users\\lucas.loterio\\Documents\\Entra21\\Exercicios\\POO\\Files\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lucas.loterio\\AppData\\Roaming\\NuGet\\NuGet.Config",

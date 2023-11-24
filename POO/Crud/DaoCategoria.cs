@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Crud.Interfaces;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace Crud
 {
-    internal class DaoCategoria
+    internal class DaoCategoria : ICrudGeneric<Categoria>
     {
         // private static List<Categoria> categorias = new List<Categoria>();
-        public static bool Salvar(Categoria categoria)
+        public bool Salvar(Categoria categoria)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
@@ -31,11 +32,11 @@ namespace Crud
 
         }
 
-        public static List<Categoria> GetCategorias()
+        public List<Categoria> GetItens()
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
@@ -59,11 +60,11 @@ namespace Crud
             }
         }
 
-        public static Categoria GetCategoriaByID(int id)
+        public Categoria GetItemByID(int id)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
@@ -86,16 +87,19 @@ namespace Crud
             }
         }
 
-        public static bool Update(Categoria categoria, Categoria newCategoria)
+        public bool Update(Categoria categoria)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = $"UPDATE tb_categorias SET Descricao = '{newCategoria.Descricao}' WHERE Id = '{categoria.Id}'";
+                cmd.CommandText = $"UPDATE tb_categorias SET Descricao = @Descricao WHERE Id = @Id";
+                cmd.Parameters.Add("Descricao", SqlDbType.VarChar).Value = categoria.Descricao;
+                cmd.Parameters.Add("Id", SqlDbType.Int).Value = categoria.Id;
+
                 cmd.Connection = connection;
                 return cmd.ExecuteNonQuery() > 0;
 
@@ -103,11 +107,11 @@ namespace Crud
 
         }
 
-        public static bool Delete(Categoria categoria)
+        public bool Delete(Categoria categoria)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();

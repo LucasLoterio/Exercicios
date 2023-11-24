@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "64dVo8ftK7tnKXTLZJYSsuWZm/QMDosV5bgrV7zppZluvhACTwRyQw5baRjHEPefLfl+rgxxG85yI4fJ1xS8gw==",
+  "dgSpecHash": "709tvvsNtevNqKqt248ZCTosmnGAvV3UIflhglfDQ1QZvyX66YmLMZMgYsTX+lD90IXE7hnt9OA2iDiSc65/CA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas.loterio\\source\\repos\\Crud\\Crud.csproj",
+  "projectFilePath": "C:\\Users\\lucas.loterio\\Documents\\Entra 21\\Exercicios\\POO\\Crud\\Crud.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas.loterio\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\lucas.loterio\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

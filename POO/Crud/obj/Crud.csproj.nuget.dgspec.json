@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas.loterio\\source\\repos\\Crud\\Crud.csproj": {}
+    "C:\\Users\\lucas.loterio\\Documents\\Entra 21\\Exercicios\\POO\\Crud\\Crud.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas.loterio\\source\\repos\\Crud\\Crud.csproj": {
+    "C:\\Users\\lucas.loterio\\Documents\\Entra 21\\Exercicios\\POO\\Crud\\Crud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas.loterio\\source\\repos\\Crud\\Crud.csproj",
+        "projectUniqueName": "C:\\Users\\lucas.loterio\\Documents\\Entra 21\\Exercicios\\POO\\Crud\\Crud.csproj",
         "projectName": "Crud",
-        "projectPath": "C:\\Users\\lucas.loterio\\source\\repos\\Crud\\Crud.csproj",
+        "projectPath": "C:\\Users\\lucas.loterio\\Documents\\Entra 21\\Exercicios\\POO\\Crud\\Crud.csproj",
         "packagesPath": "C:\\Users\\lucas.loterio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas.loterio\\source\\repos\\Crud\\obj\\",
+        "outputPath": "C:\\Users\\lucas.loterio\\Documents\\Entra 21\\Exercicios\\POO\\Crud\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lucas.loterio\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -45,6 +45,7 @@
                         DeleteProduto();
                         break;
                     default:
+                        Console.WriteLine("Opção invaliada");
                         break;
                 }
 
@@ -62,7 +63,7 @@
             Console.WriteLine("Digite a descrição do produto:");
             categoria.Descricao = Console.ReadLine();
 
-            if (DaoCategoria.Salvar(categoria))
+            if (new DaoCategoria().Salvar(categoria))
             {
                 Console.WriteLine("Categoria salva!");
             }
@@ -70,7 +71,7 @@
 
         static void GetCategorias()
         {
-            var categorias = DaoCategoria.GetCategorias();
+            var categorias = new DaoCategoria().GetItens();
 
             foreach (var categoria in categorias)
             {
@@ -80,23 +81,16 @@
 
         static void UpdateCategoria()
         {
-            var categorias = DaoCategoria.GetCategorias();
 
             Console.WriteLine("Digite o ID da categoria a ser atualizada:");
             var id = Convert.ToInt32(Console.ReadLine());
+            var categoria = new DaoCategoria().GetItemByID(id);
 
-            for (int i = 0; i < categorias.Count; i++)
-            {
-                if (id == categorias[i].Id)
-                {
                     Console.Clear();
-                    Console.WriteLine(categorias[i]);
+                    Console.WriteLine(categoria);
                     Console.WriteLine("\nDigite a nova descrição:");
-                    var newDesc = Console.ReadLine();
-                    DaoCategoria.Update(categorias[i], new Categoria(newDesc));
-                    break;
-                }
-            }
+                    categoria.Descricao = Console.ReadLine();
+                    new DaoCategoria().Update(categoria);
         }
 
         static void DeleteCategoria()
@@ -104,7 +98,7 @@
 
             Console.WriteLine("Digite o ID da categoria que deseja excluir:");
             var id = Convert.ToInt32(Console.ReadLine());
-            var categoria = DaoCategoria.GetCategoriaByID(id);
+            var categoria = new DaoCategoria().GetItemByID(id);
 
             if (id == categoria.Id)
             {
@@ -114,7 +108,7 @@
                 var r = Console.ReadLine();
                 if (r.ToUpper() == "SIM")
                 {
-                    DaoCategoria.Delete(categoria);
+                    new DaoCategoria().Delete(categoria);
                     Console.WriteLine("Categoria deletada.");
                 }
             }
@@ -135,10 +129,10 @@
 
             Console.WriteLine("Digite o ID da categoria do produto:");
             var id = Convert.ToInt32(Console.ReadLine());
-            var categoria = DaoCategoria.GetCategoriaByID(id);
+            var categoria = new DaoCategoria().GetItemByID(id);
             produto.Categoria = categoria;
 
-            if (DaoProduto.Salvar(produto))
+            if (new DaoProduto().Salvar(produto))
             {
                 Console.WriteLine("Produto salvo!");
             }
@@ -146,7 +140,7 @@
 
         static void GetProdutos()
         {
-            var produtos = DaoProduto.GetProdutos();
+            var produtos = new DaoProduto().GetItens();
 
             foreach (var produto in produtos)
             {
@@ -159,44 +153,59 @@
 
             Console.WriteLine("Digite o ID do produto a ser atualizado:");
             var id = Convert.ToInt32(Console.ReadLine());
-            var produto = DaoProduto.GetProdutoByID(id);
+            var produto = new DaoProduto().GetItemByID(id);
 
             if (id == produto.Id)
             {
                 Console.Clear();
                 Console.WriteLine(produto);
                 Console.WriteLine("\nDigite o novo nome:");
-                var newName = Console.ReadLine();
+                produto.Nome = Console.ReadLine();
                 Console.WriteLine("Digite o novo valor:");
-                var newValue = Convert.ToDouble(Console.ReadLine());
+                produto.ValorUnit = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Digite o novo estoque:");
-                var newEstoque = Convert.ToInt32(Console.ReadLine());
+                produto.Estoque = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Digite o novo ID de categoria:");
-                var newCatID = Convert.ToInt32(Console.ReadLine());
-                DaoProduto.Update(produto, new Produto(newName, newValue, newEstoque, DaoCategoria.GetCategoriaByID(newCatID)));
+                var idCat = Convert.ToInt32(Console.ReadLine());
+                produto.Categoria = new DaoCategoria().GetItemByID(idCat);
+                new DaoProduto().Update(produto);
+            }
+        }
+
+        static void GetProdutosByCategoriaID()
+        {
+            
+            GetCategorias();
+            DaoProduto daoProduto = new DaoProduto();
+
+            Console.WriteLine("Digite o id da categoria:");
+            var id = Convert.ToInt32(Console.ReadLine());
+
+            var produtos = daoProduto.GetItemByCategoria(id);
+
+            foreach (var produto in produtos)
+            {
+                Console.WriteLine(produto);
             }
         }
 
         static void DeleteProduto()
         {
-
+            DaoProduto daoProduto = new();
             Console.WriteLine("Digite o ID da categoria que deseja excluir:");
             var id = Convert.ToInt32(Console.ReadLine());
-            var produto = DaoProduto.GetProdutoByID(id);
+            var produto = daoProduto.GetItemByID(id);
 
 
-            if (id == produto.Id)
-            {
                 Console.Clear();
                 Console.WriteLine(produto);
                 Console.WriteLine("Tem certeza que seja excluir permanentemente esta categoria?(SIM)");
                 var r = Console.ReadLine();
                 if (r.ToUpper() == "SIM")
                 {
-                    DaoProduto.Delete(produto);
+                    daoProduto.Delete(produto);
                     Console.WriteLine("Produto deletada.");
                 }
-            }
         }
     }
 }

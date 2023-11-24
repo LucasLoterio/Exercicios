@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Crud.Interfaces;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Crud
 {
-    internal class DaoProduto
+    internal class DaoProduto : ICrudGeneric<Produto>
     {
-        public static bool Salvar(Produto produto)
+        public bool Salvar(Produto produto)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
@@ -33,12 +34,11 @@ namespace Crud
 
         }
 
-        public static List<Produto> GetProdutos()
+        public List<Produto> GetItens()
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
-                connection.Open();
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"; connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
@@ -57,19 +57,18 @@ namespace Crud
                     produto.ValorUnit = Convert.ToDouble(dr["ValorUnit"]);
                     produto.Estoque = Convert.ToInt32(dr["Estoque"]);
                     var catID = Convert.ToInt32(dr["CategoriaID"]);
-                    produto.Categoria = DaoCategoria.GetCategoriaByID(catID);
+                    produto.Categoria = new DaoCategoria().GetItemByID(catID);
 
                     produtos.Add(produto);
                 }
                 return produtos;
             }
         }
-        public static Produto GetProdutoByID(int id)
+        public Produto GetItemByID(int id)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
-                connection.Open();
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"; connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
@@ -87,7 +86,7 @@ namespace Crud
                     produto.ValorUnit = Convert.ToDouble(dr["ValorUnit"]);
                     produto.Estoque = Convert.ToInt32(dr["Estoque"]);
                     var catID = Convert.ToInt32(dr["CategoriaID"]);
-                    produto.Categoria = DaoCategoria.GetCategoriaByID(catID);
+                    produto.Categoria = new DaoCategoria().GetItemByID(catID);
 
                     return produto;
                 }
@@ -95,16 +94,55 @@ namespace Crud
             }
         }
 
-        public static bool Update(Produto produto, Produto newProduto)
+            public List<Produto> GetItemByCategoria(int id)
+            {
+                using (SqlConnection connection = new())
+                {
+                    connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"; connection.Open();
+
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = $"SELECT * FROM tb_produtos WHERE CategoriaID = {id}";
+
+                    cmd.Connection = connection;
+
+                    SqlDataReader dr;
+                    dr = cmd.ExecuteReader();
+                    List<Produto> produtos = new List<Produto>();
+                    while (dr.Read())
+                    {
+                        Produto produto = new Produto();
+                        produto.Id = Convert.ToInt32(dr["Id"]);
+                        produto.Nome = Convert.ToString(dr["Nome"]);
+                        produto.ValorUnit = Convert.ToDouble(dr["ValorUnit"]);
+                        produto.Estoque = Convert.ToInt32(dr["Estoque"]);
+                        var catID = Convert.ToInt32(dr["CategoriaID"]);
+                        produto.Categoria = new DaoCategoria().GetItemByID(catID);
+
+                        produtos.Add(produto);
+                    }
+                    return produtos;
+                }
+            }
+
+        public bool Update(Produto produto)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = $"UPDATE tb_produtos SET Nome = '{newProduto.Nome}', ValorUnit = '{newProduto.ValorUnit}', Estoque = '{newProduto.Estoque}', CategoriaID = '{newProduto.Categoria.Id}' WHERE Id = '{produto.Id}'";
+                cmd.CommandText = $"UPDATE tb_produtos SET Nome = @Nome , ValorUnit = @ValorUnit, Estoque = @Estoque, CategoriaID = @CategoriaID WHERE ID = @ID";
+
+                cmd.Parameters.Add("Nome", SqlDbType.VarChar).Value = produto.Nome;
+                cmd.Parameters.Add("ValorUnit", SqlDbType.Decimal).Value = produto.ValorUnit;
+                cmd.Parameters.Add("Estoque", SqlDbType.Int).Value = produto.Estoque;
+                cmd.Parameters.Add("CategoriaID", SqlDbType.Int).Value = produto.Categoria.Id;
+                cmd.Parameters.Add("ID", SqlDbType.Int).Value = produto.Id;
+
+
                 cmd.Connection = connection;
                 return cmd.ExecuteNonQuery() > 0;
 
@@ -112,11 +150,11 @@ namespace Crud
 
         }
 
-        public static bool Delete(Produto produto)
+        public bool Delete(Produto produto)
         {
             using (SqlConnection connection = new())
             {
-                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\victor.eisenhut\Documents\categoriaDB.mdf;Integrated Security=True;Connect Timeout=30";
+                connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Crud;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand();

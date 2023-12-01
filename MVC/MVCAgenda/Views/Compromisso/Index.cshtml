@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MVCAgenda.Models.Compromisso>
+@{
+   ViewData["title"] = "Compromissos";
+}
+
+<h2 class="text-center">@ViewData["title"]</h2>
+
+@Html.ActionLink("Create","Create")
+
+<hr />
+
+<table class="table">
+    <thead class="table-info">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Descricao)</th>
+            <th>@Html.DisplayNameFor(model => model.Data)</th>
+            <th>@Html.DisplayNameFor(model => model.Contato.Email)</th>
+        </tr>
+        <tbody class="table-dark">
+            @foreach(var item in Model)
+            {
+            <tr>
+                <td>@Html.DisplayFor(model => item.Id)</td>
+                <td>@Html.DisplayFor(model => item.Descricao)</td>
+                <td>@Html.DisplayFor(model => item.Data)</td>
+                <td>@Html.DisplayFor(model => item.Contato.Email)</td>
+            </tr>
+            }
+        </tbody>
+    </thead>
+</table>

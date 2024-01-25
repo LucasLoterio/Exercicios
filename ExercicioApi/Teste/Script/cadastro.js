@@ -1,8 +1,8 @@
 async function cadastrar()
     {
-        let auxU = document.getElementById("user").value
-        let auxS = document.getElementById("senha").value
-        let cargo = document.getElementsByName('cargo')
+        let auxU = document.getElementById("name_login").value
+        let auxS = document.getElementById("senha_login").value
+        let cargo = document.getElementsByName('cargo_login')
         let resultado = document.querySelector("#resultados")
         let auxR = ""
         if (cargo[0].checked == true){

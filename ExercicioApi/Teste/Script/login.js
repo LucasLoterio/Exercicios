@@ -1,8 +1,8 @@
 async function Logar()
     {
         let resultado = document.querySelector("#resultados")
-        let auxU = document.getElementById("user").value
-        let auxS = document.getElementById("senha").value
+        let auxU = document.getElementById("name_login").value
+        let auxS = document.getElementById("senha_login").value
         let obj = 
         {
             userName: auxU,

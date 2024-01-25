@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "24YCsKgrB2Qdiy5JWq67cpYNQbAcYS3Wcniap2khYS0=",
+  "Hash": "M4XZ9/j1JXfTxjeb63oiHSGg4EBfpxG6REYP4C7m2G4=",
   "Source": "DesafioApi",
   "BasePath": "_content/DesafioApi",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "C:\\Users\\lucas.loterio\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Identity": "C:\\Users\\Willikit\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lucas.loterio\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Willikit\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -25,13 +25,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\lucas.loterio\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Willikit\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\lucas.loterio\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\Willikit\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\lucas.loterio\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Willikit\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -44,13 +44,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\lucas.loterio\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js"
+      "OriginalItemSpec": "C:\\Users\\Willikit\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\lucas.loterio\\Desktop\\ExercicioApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DesafioApi.styles.css",
+      "Identity": "C:\\Users\\Willikit\\Desktop\\Entra 21\\Exercicios\\ExercicioApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DesafioApi.styles.css",
       "SourceId": "DesafioApi",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\lucas.loterio\\Desktop\\ExercicioApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Willikit\\Desktop\\Entra 21\\Exercicios\\ExercicioApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/DesafioApi",
       "RelativePath": "DesafioApi.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\lucas.loterio\\Desktop\\ExercicioApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DesafioApi.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Willikit\\Desktop\\Entra 21\\Exercicios\\ExercicioApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DesafioApi.styles.css"
     }
   ]
 }

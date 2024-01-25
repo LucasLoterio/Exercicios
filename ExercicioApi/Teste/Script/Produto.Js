@@ -11,7 +11,7 @@ async function cadastrarP(){
         estoque: auxD,
         categoria: auxF
     }
-    if(auxU != "" && auxS !="" && auxR != "")
+    if(auxA != "" && auxS !="" && auxD != "" && auxF != "")
     {
         await fetch('http://localhost:5063/api/Produtoes',
         {

@@ -82,3 +82,20 @@
 
     margin-top: 10%;
 }
+#principal{
+    background-color: black;
+    height: 150px;
+    color: white;
+}
+
+#secundario{
+    text-align: center;
+    word-spacing: 45px;
+    background-color: rgb(48, 48, 48);
+    height: 40px;
+}
+.itens{
+    color: white;
+    font-size: 25px;
+    
+}

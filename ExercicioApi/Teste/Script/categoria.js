@@ -8,7 +8,7 @@ async function cadastrarC(){
     }
     if(auxS !="")
     {
-        await fetch('http://localhost:5063/api/Produtoes',
+        await fetch('http://localhost:5171/api/Categorias',
         {
             method: "POST",
             headers: {'Authorization': 'Bearer ' + token,'Content-Type' : 'application/json'},

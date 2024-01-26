@@ -10,7 +10,7 @@ async function Logar()
         }
         if(auxU != "" && auxS != "")
         {
-            fetch('http://localhost:5063/api/Users',
+            fetch('http://localhost:5171/api/Users',
             {
                 method: "POST",
                 headers: {'Content-Type' : 'application/json'},

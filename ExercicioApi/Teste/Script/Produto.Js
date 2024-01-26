@@ -13,7 +13,7 @@ async function cadastrarP(){
     }
     if(auxA != "" && auxS !="" && auxD != "" && auxF != "")
     {
-        await fetch('http://localhost:5063/api/Produtoes',
+        await fetch('http://localhost:5171/api/Produtos',
         {
             method: "POST",
             headers: {'Authorization': 'Bearer ' + token,'Content-Type' : 'application/json'},

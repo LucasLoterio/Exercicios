@@ -82,20 +82,37 @@
 
     margin-top: 10%;
 }
-#principal{
-    background-color: black;
-    height: 150px;
-    color: white;
+
+header{
+    background-color: #FF985F;
+    padding: 1rem;
 }
 
-#secundario{
-    text-align: center;
-    word-spacing: 45px;
-    background-color: rgb(48, 48, 48);
-    height: 40px;
-}
-.itens{
-    color: white;
-    font-size: 25px;
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: center;
+    background: transparent;
+
     
+    font-size: 24px;
+
 }
+
+.link_header{
+    text-decoration: none;
+    color: #f6f6f6;
+    opacity: 65%;
+    text-transform: uppercase;
+    background: transparent;
+    margin: 1rem;
+    transition: 1s;
+}
+
+.link_header:hover {
+    text-decoration: none;
+    opacity: 100%;
+}
+

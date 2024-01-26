@@ -9,6 +9,15 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
+    <header>
+      <nav>
+        <a class="link_header" href="cad.html">Listar</a>
+        <a class="link_header" href="login.html">Login</a>
+        <a class="link_header" href="produto.html">Cadastrar</a>
+        <a class="link_header" href="categoria.html">Cadastrar Produtos</a>
+      </nav>
+ </header>
+
     <section>
         <div id="cad_main_div">
             <div>
@@ -55,6 +64,27 @@
                 
             </div>
         </div>
+      </div>
+      <br>
+      <div class="input_div_login_button">
+        <button onclick="carregar()" id="btn_cad">CARREGAR</button>
+
+        <table hidden id="tabela">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Estoque</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+      </div>
+        
     </section>
 	<script src="Script/Produto.Js"></script>
   </body>

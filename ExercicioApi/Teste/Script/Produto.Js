@@ -22,3 +22,30 @@ async function cadastrarP(){
 
     }
 }
+
+
+function carregar() {
+    produto = ''
+    tabela = document.getElementsByTagName("tbody")[0]
+    tabela.innerHTML = ''
+    fetch('http://localhost:5171/api/Produtos')
+    .then(data => {
+        return data.json();
+    })
+    .then(post => {
+        post.forEach(element => {
+            produto = `<tr>
+                <td>${element.id}</td>
+                <td>${element.descricao}</td>
+                <td>${element.estoque}</td>
+                <td>${element.preco}</td>
+                <td>${JSON.stringify(element.categoria)}</td>
+                </tr>`
+            tabela.innerHTML += produto
+        
+        });
+    });   
+    let table = document.getElementById("tabela")
+    table.removeAttribute("hidden")
+    console.log(produto)
+}

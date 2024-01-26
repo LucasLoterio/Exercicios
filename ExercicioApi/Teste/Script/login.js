@@ -5,7 +5,7 @@ async function Logar()
         let auxS = document.getElementById("senha_login").value
         let obj = 
         {
-            userName: auxU,
+            username: auxU,
             password: auxS
         }
         if(auxU != "" && auxS != "")
